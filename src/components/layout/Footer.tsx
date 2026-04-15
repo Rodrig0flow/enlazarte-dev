@@ -30,7 +30,7 @@ export function Footer() {
             <h4 className="text-white font-medium mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>WhatsApp: +52 56 2434 1903</li>
-              <li>Email: hola@enlazarte.dev</li>
+              <li>Email: rod.ma.flo@gmail.com</li>
             </ul>
           </div>
         </div>

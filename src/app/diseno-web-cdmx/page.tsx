@@ -84,8 +84,8 @@ export default function DisenoWebCDMXPage() {
     <main className="min-h-screen bg-black">
       <WhatsAppButton />
       <section className="relative py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 via-black to-[#7B2CBF]/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(0,180,216,0.15),_transparent_50%)]" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#00B4D8]/10 via-black to-[#7B2CBF]/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,180,216,0.15),transparent_50%)]" />
         <Section className="relative">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
@@ -168,7 +168,7 @@ export default function DisenoWebCDMXPage() {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <svg
-                      className="w-5 h-5 text-[#00B4D8] mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-[#00B4D8] mt-0.5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

@@ -53,7 +53,7 @@ export function ServicesSection() {
             {basicFeatures.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
                 <svg
-                  className="w-5 h-5 text-[#00B4D8] mt-0.5 flex-shrink-0"
+                  className="w-5 h-5 text-[#00B4D8] mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ export function ServicesSection() {
           </GlowButton>
         </div>
 
-        <div className="relative bg-gradient-to-br from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-[#00B4D8]/30 rounded-2xl p-8">
+        <div className="relative bg-linear-to-br from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-[#00B4D8]/30 rounded-2xl p-8">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00B4D8] text-black text-xs font-bold px-4 py-1 rounded-full">
             RECOMENDADO
           </div>
@@ -86,7 +86,7 @@ export function ServicesSection() {
             </h3>
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
               <span className="text-3xl md:text-4xl font-bold text-white">Desde</span>
-              <span className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00B4D8] to-[#7B2CBF]">
+              <span className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#00B4D8] to-[#7B2CBF]">
                 $20,000
               </span>
               <span className="text-lg text-gray-400">MXN</span>
@@ -98,7 +98,7 @@ export function ServicesSection() {
             {advancedFeatures.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
                 <svg
-                  className="w-5 h-5 text-[#00B4D8] mt-0.5 flex-shrink-0"
+                  className="w-5 h-5 text-[#00B4D8] mt-0.5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
