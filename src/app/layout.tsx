@@ -72,8 +72,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/apple-touch-icon.2.png",
-    apple: "/apple-touch-icon.2.png",
+    icon: "/favicon.icon.png",
   },
 } as Metadata;
 
@@ -90,7 +89,7 @@ export default function RootLayout({
       "Diseño y desarrollo web profesional en CDMX. Páginas web modernas, optimizadas para SEO.",
     url: "https://enlazarte.dev",
     telephone: "+52 56 2434 1903",
-    email: "hola@enlazarte.dev",
+    email: "rod.ma.flo@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Ciudad de México",
