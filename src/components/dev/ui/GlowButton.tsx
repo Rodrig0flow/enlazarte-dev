@@ -8,6 +8,7 @@ interface GlowButtonProps {
   variant?: "primary" | "secondary";
   type?: "button" | "submit";
   disabled?: boolean;
+  external?: boolean;
 }
 
 export function GlowButton({
@@ -18,6 +19,7 @@ export function GlowButton({
   variant = "primary",
   type = "button",
   disabled = false,
+  external = false,
 }: GlowButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-xl transition-all duration-300";
@@ -33,6 +35,13 @@ export function GlowButton({
   const classes = `${baseStyles} ${variants[variant]} ${disabled ? disabledStyles : ""} ${className}`;
 
   if (href && !disabled) {
+    if (external) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}

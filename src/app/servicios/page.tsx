@@ -79,7 +79,7 @@ export default function ServiciosPage() {
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <svg
-                      className="w-5 h-5 text-[#00B4D8] mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-[#00B4D8] mt-0.5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -102,7 +102,7 @@ export default function ServiciosPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-white/10 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-linear-to-r from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-white/10 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">¿Necesitas algo diferente?</h3>
           <p className="text-gray-400 mb-6">
             Puedo adaptar mis servicios a tus necesidades específicas.

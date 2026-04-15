@@ -52,7 +52,7 @@ export default function PortafolioPage() {
               key={index}
               className="group bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#00B4D8]/50 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-video bg-gradient-to-br from-[#00B4D8]/10 to-[#7B2CBF]/10 rounded-xl mb-6 flex items-center justify-center">
+              <div className="aspect-video bg-linear-to-br from-[#00B4D8]/10 to-[#7B2CBF]/10 rounded-xl mb-6 flex items-center justify-center">
                 <svg
                   className="w-16 h-16 text-gray-600"
                   fill="none"
