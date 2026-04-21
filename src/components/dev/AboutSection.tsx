@@ -9,26 +9,30 @@ export function AboutSection() {
           <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
             Sobre mí
           </p>
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Rodrigo Flores
+            Desarrollo webs que realmente generan resultados
           </h2>
+
           <div className="space-y-4 text-gray-400">
             <p className="text-lg">
-              <span className="text-white font-medium">
-                Ingeniero en Sistemas de Software
-              </span>{" "}
-              con enfoque en desarrollo web y diseño visual.
+              Soy <span className="text-white font-medium">Rodrigo Flores</span>, 
+              Ingeniero en Sistemas de Software especializado en desarrollo web moderno.
             </p>
+
             <p>
-              Creo firmemente en el equilibrio perfecto entre funcionalidad,
-              estética y experiencia de usuario. Cada proyecto es una oportunidad
-              para crear algo que no solo se vea bien, sino que realmente funcione
-              y conecte con las personas.
+              Ayudo a emprendedores y negocios a tener una presencia digital profesional 
+              que no solo se vea bien, sino que genere confianza y atraiga clientes.
             </p>
+
             <p>
-              Mi filosofía de trabajo se basa en la transparencia, la
-              comunicación constante y la entrega de resultados que superen
-              expectativas.
+              Mi enfoque combina tecnología, diseño y estrategia para crear sitios web 
+              rápidos, funcionales y alineados con los objetivos de cada cliente.
+            </p>
+
+            <p>
+              Trabajo de forma cercana y personalizada, entendiendo tu negocio para 
+              construir una solución que realmente aporte valor.
             </p>
           </div>
         </div>

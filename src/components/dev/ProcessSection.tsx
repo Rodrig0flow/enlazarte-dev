@@ -1,23 +1,24 @@
 import { Section } from "./ui/Section";
+import { GlowButton } from "./ui/GlowButton";
 
 const steps = [
   {
     day: "Día 1",
-    title: "Definición de contenido",
+    title: "Definimos tu proyecto",
     description:
-      "Reunimos toda la información necesaria: textos, imágenes, preferencias de diseño y objetivos del proyecto.",
+      "Recopilamos la información clave: objetivos, contenido y estilo. Te guío para que todo sea rápido y sin complicaciones.",
   },
   {
     day: "Día 2-3",
     title: "Diseño y desarrollo",
     description:
-      "Creo el diseño y lo desarrollo. Te mantengo informado del progreso con actualizaciones diarias.",
+      "Creo tu sitio web mientras te mantengo informado. Puedes ver avances y dar feedback en todo momento.",
   },
   {
     day: "Día 4",
-    title: "Revisión final",
+    title: "Revisión y entrega",
     description:
-      "Presentamos el resultado final, hacemos ajustes finales y entregamos tu sitio listo para usar.",
+      "Ajustamos los últimos detalles y te entrego tu web lista para usar, atraer clientes y crecer.",
   },
 ];
 
@@ -28,17 +29,18 @@ export function ProcessSection() {
         <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
           Proceso
         </p>
+
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Así trabajo
+          Tu web lista en días, no en meses
         </h2>
+
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Un proceso rápido, ágil y transparente. Tu proyecto en manos expertas
-          en tiempo récord.
+          Un proceso simple, rápido y transparente. Tú te enfocas en tu negocio, yo me encargo de todo lo técnico.
         </p>
       </div>
 
       <div className="relative">
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#00B4D8] to-[#7B2CBF] hidden md:block" />
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-[#00B4D8] to-[#7B2CBF] hidden md:block" />
 
         <div className="space-y-12 md:space-y-0">
           {steps.map((step, index) => (
@@ -50,16 +52,20 @@ export function ProcessSection() {
             >
               <div
                 className={`md:w-[calc(50%-2rem)] ${
-                  index % 2 === 0 ? "md:text-right md:pr-12" : "md:order-3 md:pl-12"
+                  index % 2 === 0
+                    ? "md:text-right md:pr-12"
+                    : "md:order-3 md:pl-12"
                 }`}
               >
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#00B4D8]/50 transition-all duration-300">
                   <div className="text-[#00B4D8] text-sm font-medium mb-2">
                     {step.day}
                   </div>
+
                   <h3 className="text-xl font-bold text-white mb-2">
                     {step.title}
                   </h3>
+
                   <p className="text-gray-400">{step.description}</p>
                 </div>
               </div>
@@ -74,14 +80,18 @@ export function ProcessSection() {
         </div>
       </div>
 
-      <div className="mt-16 bg-gradient-to-r from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-white/10 rounded-2xl p-8 text-center">
+      <div className="mt-16 bg-linear-to-r from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-white/10 rounded-2xl p-8 text-center">
         <p className="text-2xl text-white font-medium mb-2">
-          4 días para tener tu sitio listo
+          En 4 días puedes tener tu web funcionando
         </p>
-        <p className="text-gray-400">
-          Sin largos meses de espera. Resultados rápidos sin sacrificar
-          calidad.
+
+        <p className="text-gray-400 mb-6">
+          Sin procesos complicados ni tiempos largos. Rápido, claro y enfocado en resultados.
         </p>
+
+        <GlowButton href="#contacto">
+          Quiero mi web en pocos días
+        </GlowButton>
       </div>
     </Section>
   );

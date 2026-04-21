@@ -16,7 +16,7 @@ export function Section({
       id={id}
       className={`
         w-full px-6 py-24 md:py-32
-        ${withGradient ? "bg-gradient-to-b from-[#0a0a1a] to-black" : "bg-black"}
+        ${withGradient ? "bg-linear-to-b from-[#0a0a1a] to-black" : "bg-black"}
         ${className}
       `}
     >

@@ -1,10 +1,11 @@
 import { Section } from "./ui/Section";
+import { GlowButton } from "./ui/GlowButton";
 
 const values = [
   {
-    title: "Solo pagas si estás satisfecho",
+    title: "Pagas solo si te convence",
     description:
-      "No hay riesgos para ti. Solo emitimos la factura cuando confirmas que el resultado cumple tus expectativas.",
+      "Primero ves resultados. Solo pagas cuando estás completamente satisfecho con el resultado final.",
     icon: (
       <svg
         className="w-8 h-8"
@@ -22,9 +23,9 @@ const values = [
     ),
   },
   {
-    title: "Sin riesgo",
+    title: "Proceso claro y sin sorpresas",
     description:
-      "Trabajo con transparencia en cada paso. Si algo no funciona como esperas, ajustamos hasta que esté perfecto.",
+      "Comunicación constante y ajustes en cada etapa. Siempre sabes qué está pasando con tu proyecto.",
     icon: (
       <svg
         className="w-8 h-8"
@@ -42,9 +43,9 @@ const values = [
     ),
   },
   {
-    title: "Propuesta funcional en pocos días",
+    title: "Resultados en pocos días",
     description:
-      "No necesitas esperar semanas. En 4 días tienes una propuesta tangible que puedes usar y probar.",
+      "En menos de una semana tienes una versión funcional lista para validar y empezar a usar.",
     icon: (
       <svg
         className="w-8 h-8"
@@ -68,14 +69,17 @@ export function ValuePropositionSection() {
     <Section withGradient>
       <div className="text-center mb-16">
         <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
-          Por qué elegirme
+          Por qué trabajar conmigo
         </p>
+
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Propuesta de valor
+          Sin riesgos. Sin complicaciones.
+          <br />
+          Con resultados reales.
         </h2>
+
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Tu satisfacción es mi prioridad. Trabajar conmigo es sencillo, sin
-          complicaciones ni sorpresas.
+          Trabajo contigo de forma clara, rápida y enfocada en resultados. Sabes lo que obtienes desde el inicio.
         </p>
       </div>
 
@@ -88,14 +92,22 @@ export function ValuePropositionSection() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00B4D8]/10 text-[#00B4D8] mb-6 group-hover:bg-[#00B4D8]/20 transition-colors">
               {value.icon}
             </div>
+
             <h3 className="text-xl font-bold text-white mb-3">
               {value.title}
             </h3>
+
             <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
               {value.description}
             </p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <GlowButton href="#contacto">
+          Empezar mi proyecto
+        </GlowButton>
       </div>
     </Section>
   );

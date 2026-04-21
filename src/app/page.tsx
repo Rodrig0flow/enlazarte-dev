@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       <HeroSection />
-      <AboutSection />
       <ImportanceSection />
-      <ValuePropositionSection />
       <ServicesSection />
+      <ValuePropositionSection />
       <ProcessSection />
+      <AboutSection />
       <FinalCTASection />
       <Footer />
     </main>

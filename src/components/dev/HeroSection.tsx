@@ -17,19 +17,19 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in">
         <p className="text-[#00B4D8] tracking-[0.4em] uppercase text-sm mb-6">
-          Desarrollo Web Profesional
+           Desarrollo Web para negocios y marca personal
         </p>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
-          Soluciones modernas,
+          Páginas web que
           <br />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-[#00B4D8] to-[#7B2CBF]">
-            funcionales y adaptadas
+            convierten visitas en clientes
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">
-          Transformo ideas en experiencias digitales que conectan con tu audiencia
+          Diseño y desarrollo sitios modernos, rápidos y optimizados para ayudarte a destacar y hacer crecer tu negocio en internet.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

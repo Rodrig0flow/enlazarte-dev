@@ -2,22 +2,22 @@ import { Section } from "./ui/Section";
 import { GlowButton } from "./ui/GlowButton";
 
 const basicFeatures = [
-  "Diseño moderno y profesional",
-  "Versión móvil optimizada",
-  "Botón de WhatsApp integrado",
-  "Formulario de contacto",
+  "Diseño profesional que genera confianza",
+  "Optimizado para móviles (más clientes desde celular)",
+  "Botón de WhatsApp para contacto directo",
+  "Formulario para captar clientes potenciales",
   "Entrega en 4 días",
   "1 revisión incluida",
 ];
 
 const advancedFeatures = [
   "Todo lo del plan básico",
-  "Sistema de citas/reservas",
-  "Login / área privada",
-  "SEO optimizado",
-  "Branding personalizado",
-  "Integraciones (pagos, CRM)",
-  "Animaciones avanzadas",
+  "Sistema de citas o reservas automatizado",
+  "Área privada / login de usuarios",
+  "SEO optimizado para aparecer en Google",
+  "Diseño y branding personalizado",
+  "Integraciones (pagos, CRM, herramientas)",
+  "Animaciones modernas y experiencia premium",
   "Múltiples revisiones",
   "Soporte prioritario",
 ];
@@ -29,24 +29,33 @@ export function ServicesSection() {
         <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
           Servicios
         </p>
+
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Planes a tu medida
+          Elige cómo quieres hacer crecer tu negocio
         </h2>
+
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Elige el plan que mejor se adapte a tus necesidades. Ambos incluyen
-          atención personalizada y compromiso con la calidad.
+          Desde una web profesional para empezar, hasta una solución completa diseñada para escalar y atraer más clientes.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        {/* PLAN BÁSICO */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300">
           <div className="mb-6">
-            <h3 className="text-2xl font-bold text-white mb-2">Plan Básico</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">
+              Web Profesional
+            </h3>
+
             <div className="flex items-baseline gap-2">
               <span className="text-5xl font-bold text-white">$4,000</span>
               <span className="text-gray-400">MXN</span>
             </div>
-            <p className="text-gray-500 mt-2">Ideal para comenzar</p>
+
+            <p className="text-gray-500 mt-2">
+              Ideal para empezar a generar presencia y clientes
+            </p>
           </div>
 
           <ul className="space-y-4 mb-8">
@@ -71,27 +80,34 @@ export function ServicesSection() {
           </ul>
 
           <GlowButton variant="secondary" className="w-full" href="#contacto">
-            Seleccionar plan
+            Quiero empezar
           </GlowButton>
         </div>
 
+        {/* PLAN AVANZADO */}
         <div className="relative bg-linear-to-br from-[#00B4D8]/10 to-[#7B2CBF]/10 border border-[#00B4D8]/30 rounded-2xl p-8">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00B4D8] text-black text-xs font-bold px-4 py-1 rounded-full">
-            RECOMENDADO
+            MÁS ELEGIDO
           </div>
 
           <div className="mb-6">
             <h3 className="text-2xl font-bold text-white mb-2">
-              Plan Avanzado
+              Solución Completa
             </h3>
+
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-              <span className="text-3xl md:text-4xl font-bold text-white">Desde</span>
+              <span className="text-3xl md:text-4xl font-bold text-white">
+                Desde
+              </span>
               <span className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#00B4D8] to-[#7B2CBF]">
                 $20,000
               </span>
               <span className="text-lg text-gray-400">MXN</span>
             </div>
-            <p className="text-gray-500 mt-2">Solución completa</p>
+
+            <p className="text-gray-500 mt-2">
+              Para negocios que quieren escalar y automatizar
+            </p>
           </div>
 
           <ul className="space-y-4 mb-8">
@@ -116,7 +132,7 @@ export function ServicesSection() {
           </ul>
 
           <GlowButton className="w-full" href="#contacto">
-            Solicitar presupuesto
+            Quiero escalar mi negocio
           </GlowButton>
         </div>
       </div>

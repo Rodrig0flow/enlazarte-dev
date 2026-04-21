@@ -57,7 +57,7 @@ export function LiquidMetalJaguar({
         />
       </div>
 
-      <div className="absolute inset-0 z-0 blur-2xl opacity-40 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400 animate-pulse" />
+      <div className="absolute inset-0 z-0 blur-2xl opacity-40 bg-linear-to-r from-cyan-400 via-purple-500 to-pink-400 animate-pulse" />
 
       <style jsx>{`
         .liquid-mask {
