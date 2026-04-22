@@ -51,7 +51,7 @@ const services = [
 
 export default function ServiciosPage() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black pt-20">
       <WhatsAppButton />
       <Section>
         <div className="text-center mb-16">

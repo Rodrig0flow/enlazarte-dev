@@ -3,7 +3,7 @@ import { Section } from "./ui/Section";
 
 export function AboutSection() {
   return (
-    <Section withGradient>
+    <Section id="acerca" withGradient>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">

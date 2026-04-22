@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { WhatsAppButton } from "@/components/dev/ui/WhatsAppButton";
+import { Navbar } from "@/components/layout/Navbar";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -127,6 +128,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-black text-white antialiased">
+        <Navbar />
         {children}
         <WhatsAppButton />
       </body>

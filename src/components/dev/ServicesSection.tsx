@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Section } from "./ui/Section";
 import { GlowButton } from "./ui/GlowButton";
 
@@ -26,9 +27,9 @@ export function ServicesSection() {
   return (
     <Section withGradient id="servicios">
       <div className="text-center mb-16">
-        <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
+        <Link href="/servicios" className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4 hover:underline">
           Servicios
-        </p>
+        </Link>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Elige cómo quieres hacer crecer tu negocio

@@ -5,14 +5,17 @@ import { useRef, useState } from "react";
 export function LiquidMetalJaguar({
   size = 220,
   duration = 8,
+  animated = true,
 }: {
   size?: number;
   duration?: number;
+  animated?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 50, y: 50 });
 
   const handleMove = (e: React.MouseEvent) => {
+    if (!animated) return;
     const rect = ref.current?.getBoundingClientRect();
     if (!rect) return;
 
@@ -82,12 +85,9 @@ export function LiquidMetalJaguar({
 
           background-blend-mode: screen;
           mix-blend-mode: lighten;
-
-          animation: flow ${duration}s ease-in-out infinite;
-
+          ${animated ? `animation: flow ${duration}s ease-in-out infinite;` : ""}
           filter: blur(8px) contrast(1.2) saturate(1.4);
-
-          will-change: background-position;
+          ${animated ? "will-change: background-position;" : ""}
         }
 
         .specular {
@@ -95,9 +95,10 @@ export function LiquidMetalJaguar({
           height: 100%;
           mix-blend-mode: screen;
           opacity: 0.6;
-          transition: background 0.1s ease-out;
+          ${animated ? "transition: background 0.1s ease-out;" : ""}
         }
 
+        ${animated ? `
         @keyframes flow {
           0% {
             background-position: 0% 50%;
@@ -108,7 +109,7 @@ export function LiquidMetalJaguar({
           100% {
             background-position: 0% 50%;
           }
-        }
+        }` : ""}
       `}</style>
     </div>
   );

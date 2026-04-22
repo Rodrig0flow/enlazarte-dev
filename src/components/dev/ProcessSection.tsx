@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Section } from "./ui/Section";
 import { GlowButton } from "./ui/GlowButton";
 
@@ -24,11 +25,11 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <Section>
+    <Section id="proceso">
       <div className="text-center mb-16">
-        <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
+        <Link href="/proceso" className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4 hover:underline">
           Proceso
-        </p>
+        </Link>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Tu web lista en días, no en meses
