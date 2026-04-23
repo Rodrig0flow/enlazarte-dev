@@ -3,12 +3,15 @@ import { GlowButton } from "./ui/GlowButton";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      <div className="absolute inset-0 opacity-20 overflow-hidden">
+
+      {/* 🔥 FIX AQUÍ */}
+      <div className="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
         <div className="absolute top-[10%] left-[10%] w-[60vw] h-[60vw] max-w-125 max-h-125 bg-[#00B4D8] rounded-full blur-[120px]" />
         <div className="absolute bottom-[10%] right-[10%] w-[60vw] h-[60vw] max-w-125 max-h-125 bg-[#7B2CBF] rounded-full blur-[120px]" />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden">
+      {/* 🔥 FIX AQUÍ */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[5%] left-[5%] w-px h-[15%] bg-linear-to-b from-white/50 to-transparent" />
         <div className="absolute top-[20%] right-[10%] w-[10%] h-px bg-linear-to-r from-white/50 to-transparent" />
         <div className="absolute bottom-[25%] left-[30%] w-px h-[12%] bg-linear-to-b from-white/30 to-transparent" />
@@ -17,7 +20,7 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in">
         <p className="text-[#00B4D8] tracking-[0.4em] uppercase text-sm mb-6">
-           Desarrollo Web para negocios y marca personal
+          Desarrollo Web para negocios y marca personal
         </p>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
@@ -55,7 +58,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce pointer-events-none">
         <svg
           className="w-6 h-6 text-white/50"
           fill="none"

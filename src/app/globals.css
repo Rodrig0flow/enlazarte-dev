@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --z-index-9999: 9999;
+  --z-index-10000: 10000;
+  --z-index-1000: 1000;
+}
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
