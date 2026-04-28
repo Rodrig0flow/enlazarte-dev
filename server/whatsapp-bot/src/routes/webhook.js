@@ -32,15 +32,17 @@ router.post('/webhook', async (req, res) => {
         .digest('hex');
 
     if (signature !== expectedSignature) {
-      console.log('Invalid signature');
+      console.log('Invalid signature. Got:', signature, 'Expected:', expectedSignature);
       return res.sendStatus(403);
     }
   }
 
   const body = req.body;
 
+  console.log('Webhook received:', JSON.stringify(body, null, 2));
+
   if (body.object !== 'whatsapp') {
-    console.log('Not a WhatsApp event');
+    console.log('Not a WhatsApp event. Object:', body.object);
     return res.sendStatus(404);
   }
 
