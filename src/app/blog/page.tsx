@@ -1,41 +1,17 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { Footer } from "@/components/layout/Footer";
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Footer } from "@/components/layout/Footer"
+import { getAllPosts } from "@/lib/blog"
 
 export const metadata: Metadata = {
   title: "Blog | Enlazarte",
   description:
     "Consejos y guías sobre diseño web, desarrollo web y estrategias digitales para hacer crecer tu negocio.",
-};
-
-const blogPosts = [
-  {
-    slug: "como-tener-sitio-web-profesional",
-    title: "Cómo tener un sitio web profesional en 4 días",
-    excerpt:
-      "Aprende el proceso para obtener una página web profesional sin complicaciones y en tiempo récord.",
-    date: "15 de abril, 2026",
-    category: "Desarrollo Web",
-  },
-  {
-    slug: "por-que-tu-necesitas-seo",
-    title: "Por qué tu negocio necesita una web optimizada para SEO",
-    excerpt:
-      "Descubre cómo una página web bien posicionada puede atraer clientes automáticamente sin pagar publicidad.",
-    date: "10 de abril, 2026",
-    category: "SEO",
-  },
-  {
-    slug: "tendencias-diseno-web-2026",
-    title: "Tendencias de diseño web 2026",
-    excerpt:
-      "Las principales tendencias en diseño web que dominarán el próximo año y cómo aplicarlas.",
-    date: "5 de abril, 2026",
-    category: "Diseño",
-  },
-];
+}
 
 export default function BlogPage() {
+  const posts = getAllPosts()
+
   return (
     <>
       <main className="min-h-screen bg-black pt-20 pb-16">
@@ -54,7 +30,7 @@ export default function BlogPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article
                 key={post.slug}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#00B4D8]/50 transition-all duration-300"
@@ -91,5 +67,5 @@ export default function BlogPage() {
       </main>
       <Footer />
     </>
-  );
+  )
 }

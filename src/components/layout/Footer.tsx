@@ -27,6 +27,21 @@ export function Footer() {
             </ul>
           </div>
           <div>
+            <h4 className="text-white font-medium mb-4">Productos</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://enlazarte.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#00B4D8] text-sm transition-colors"
+                >
+                  Enlazarte App · Plataforma de Narrativa
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
             <h4 className="text-white font-medium mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>WhatsApp: +52 56 2434 1903</li>

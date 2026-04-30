@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Enlazarte.dev | Desarrollo Web Profesional",
+    default: "Desarrollo Web Profesional | Enlazarte.dev",
     template: "%s | Enlazarte",
   },
   description:
