@@ -13,6 +13,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Pagos**: Stripe
 - **Email**: Nodemailer
 - **UI**: React 19 + Tailwind CSS 4
+- **Blog**: next-mdx-remote + gray-matter
+- **Forms**: react-hook-form + zod
+- **Typografía**: @tailwindcss/typography
 
 ## Estructura del Proyecto
 ```
@@ -22,38 +25,53 @@ This version has breaking changes — APIs, conventions, and file structure may 
   /lib              # Utilidades (prisma.ts, etc.)
 /prisma             # Schema de base de datos
 /public             # Assets estáticos
+/content
+  /blog             # Artículos MDX del blog
 ```
 
 ## Rama Actual
-- `feature/whatsapp-bot` - Implementación de chatbot WhatsApp
+- `seo/link-app-blog` - Implementación de arquitectura de blog MDX con enlaces a enlazarte.app
 
-## Objetivo Actual
-- Implementar chatbot WhatsApp usando WhatsApp Cloud API de Meta
-- Servidor Node.js/Express separado en `/server/whatsapp-bot/`
+## Objetivos Actuales
+### SEO / Blog MDX
+- Implementar arquitectura de blog MDX con enlaces a enlazarte.app
+- Usar `next-mdx-remote` y `gray-matter` para procesamiento de contenido
+- Optimización SEO para artículos del blog
+
+### WhatsApp Bot (En progreso)
+- Chatbot WhatsApp usando WhatsApp Cloud API de Meta
+- Servidor Node.js/Express en `/server/whatsapp-bot/`
 - Despliegue en Render (free tier)
-- Exponer con ngrok para desarrollo local
-- Integrar botón flotante WhatsApp en frontend
+- Webhook configurado y operativo
 
 ## Estructura del WhatsApp Bot
 ```
 server/whatsapp-bot/
 ├── src/
 │   ├── index.js          # Entry point Express
-│   ├── config.js          # Configuración variables
+│   ├── config.js         # Configuración variables
 │   ├── routes/
-│   │   └── webhook.js     # Endpoints GET/POST webhook
+│   │   └── webhook.js    # Endpoints GET/POST webhook
 │   └── services/
-│       └── whatsapp.js    # Integración WhatsApp API
+│       └── whatsapp.js   # Integración WhatsApp API
 ├── package.json
-├── .env                   # Variables locales (NO commitear)
-├── .env.example           # Template para variables
-├── render.yaml            # Config deploy Render
-└── Dockerfile             # Contenedor opcional
+├── .env                  # Variables locales (NO commitear)
+├── render.yaml           # Config deploy Render
+└── Dockerfile            # Contenedor opcional
 ```
+**Nota**: Falta crear `.env.example` como template para variables de entorno.
 
 ## Próximos Pasos
-1. Instalar dependencias: `cd server/whatsapp-bot && npm install`
-2. Obtener credenciales de Meta (Phone Number ID, Access Token permanente)
-3. Configurar `.env` con credenciales reales
-4. Desplegar a Render o probar localmente con ngrok
-5. Configurar webhook URL en Meta Dashboard
+### SEO / Blog MDX
+1. Crear primeros artículos MDX en `/content/blog/`
+2. Implementar página de listado de artículos
+3. Implementar página individual de artículo
+4. Configurar metadata SEO y Open Graph
+5. Agregar enlaces estratégicos a enlazarte.app
+
+### WhatsApp Bot
+1. Crear `.env.example` con variables necesarias
+2. Completar configuración de credenciales de Meta
+3. Desplegar a Render o probar localmente
+4. Configurar webhook URL en Meta Dashboard
+5. Integrar botón flotante WhatsApp en frontend

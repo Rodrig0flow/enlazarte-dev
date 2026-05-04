@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Footer } from "@/components/layout/Footer"
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
 import { MDXRemote } from "next-mdx-remote/rsc"
+import remarkGfm from "remark-gfm"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -87,7 +88,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </header>
 
             <div className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-a:text-[#00B4D8] prose-a:no-underline hover:prose-a:underline prose-strong:text-white">
-              <MDXRemote source={post.content} />
+              <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             </div>
           </article>
         </div>

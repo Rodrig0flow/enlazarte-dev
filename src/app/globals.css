@@ -115,3 +115,35 @@ select:focus {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(100, 100, 100, 0.6);
 }
+
+.prose table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th {
+  background-color: rgb(255 255 255 / 0.05);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  font-size: 0.875rem;
+  color: rgb(255 255 255 / 0.7);
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.05);
+  color: rgb(255 255 255 / 0.9);
+  font-size: 0.875rem;
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.prose td:not(:first-child) {
+  text-align: right;
+}
