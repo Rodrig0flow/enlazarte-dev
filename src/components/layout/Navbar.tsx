@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { SimpleLogo } from "./SimpleLogo";
 
 const navLinks = [
@@ -14,11 +13,8 @@ const navLinks = [
 ];
 
 export function Navbar() {
-  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const isHomePage = pathname === "/";
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 20);
@@ -39,16 +35,6 @@ export function Navbar() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
-  const getHref = (label: string, defaultHref: string) => {
-    if (label === "Servicios") {
-      return isHomePage ? "/#servicios" : defaultHref;
-    }
-    if (label === "Proceso") {
-      return isHomePage ? "/#proceso" : defaultHref;
-    }
-    return defaultHref;
-  };
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -84,7 +70,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={getHref(link.label, link.href)}
+                  href={link.href}
                   onClick={handleLinkClick}
                   className="text-gray-300 hover:text-[#00B4D8] transition-colors text-sm lg:text-base"
                 >
@@ -142,7 +128,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={getHref(link.label, link.href)}
+                href={link.href}
                 onClick={handleLinkClick}
                 className="text-gray-300 hover:text-[#00B4D8] transition-colors text-2xl py-4 w-full text-center"
               >
