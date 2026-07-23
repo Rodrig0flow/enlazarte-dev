@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { LeadTable } from "@/components/admin/LeadTable";
 
+export const dynamic = "force-dynamic";
+
 interface LeadData {
   id: string;
   name: string;
