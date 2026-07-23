@@ -35,8 +35,23 @@ const budgetLabels: Record<string, string> = {
   "20k+": "Más de $20,000 MXN",
 };
 
-export function LeadTable({ leads }: { leads: LeadData[] }) {
+export function LeadTable({ leads: initialLeads }: { leads: LeadData[] }) {
+  const [leads, setLeads] = useState(initialLeads);
   const [selectedLead, setSelectedLead] = useState<LeadData | null>(null);
+
+  const handleDelete = async (id: string) => {
+    if (!window.confirm("¿Eliminar este lead? Esta acción no se puede deshacer.")) return;
+
+    try {
+      const res = await fetch(`/api/leads/${id}`, { method: "DELETE" });
+      if (res.ok) {
+        setLeads((prev) => prev.filter((l) => l.id !== id));
+        setSelectedLead(null);
+      }
+    } catch {
+      // silently fail
+    }
+  };
 
   return (
     <>
@@ -135,6 +150,15 @@ export function LeadTable({ leads }: { leads: LeadData[] }) {
                   <p className="text-white whitespace-pre-wrap">{selectedLead.message}</p>
                 </div>
               )}
+            </div>
+
+            <div className="p-6 border-t border-white/10">
+              <button
+                onClick={() => handleDelete(selectedLead.id)}
+                className="w-full px-4 py-2 bg-red-500/10 border border-red-500/30 text-red-400 rounded-lg hover:bg-red-500/20 transition-colors text-sm"
+              >
+                Eliminar lead
+              </button>
             </div>
           </div>
         </div>
