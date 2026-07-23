@@ -1,6 +1,7 @@
 import { Section } from "@/components/dev/ui/Section";
 import { GlowButton } from "@/components/dev/ui/GlowButton";
 import { WhatsAppButton } from "@/components/dev/ui/WhatsAppButton";
+import { ContactForm } from "@/components/sections/ContactForm";
 
 const services = [
   {
@@ -109,6 +110,24 @@ export default function ServiciosPage() {
             Hablemos sobre tu proyecto.
           </p>
           <GlowButton href="#contacto">Contáctame</GlowButton>
+        </div>
+      </Section>
+
+      <Section id="contacto">
+        <div className="text-center mb-12">
+          <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
+            Contacto
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Cuéntame sobre tu proyecto
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Completa el formulario y te contactaré en menos de 24 horas
+            para conocer los detalles de tu proyecto.
+          </p>
+        </div>
+        <div className="max-w-2xl mx-auto">
+          <ContactForm />
         </div>
       </Section>
     </main>
