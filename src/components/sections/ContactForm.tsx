@@ -281,6 +281,9 @@ export function ContactForm() {
 
       <div>
         <label className="block text-gray-400 text-sm mb-2">Cuéntame sobre tu proyecto</label>
+        <p className="text-gray-500 text-xs mb-3">
+          ¿Qué es tu proyecto (de qué se trata?), ¿por qué es necesario crearlo? y ¿para quién es (personas, clientes, colaboradores involucrados?)
+        </p>
         <textarea
           {...register("message", { required: "El mensaje es requerido" })}
           rows={5}
