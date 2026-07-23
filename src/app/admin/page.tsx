@@ -1,6 +1,7 @@
 import { Section } from "@/components/dev/ui/Section";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
+import { LeadTable } from "@/components/admin/LeadTable";
 
 interface LeadData {
   id: string;
@@ -28,13 +29,6 @@ async function getLeads(): Promise<LeadData[]> {
 
 export default async function AdminPage() {
   const leads = await getLeads();
-
-  const statusColors: Record<string, string> = {
-    new: "bg-blue-500/20 text-blue-400",
-    contacted: "bg-yellow-500/20 text-yellow-400",
-    "in-progress": "bg-purple-500/20 text-purple-400",
-    completed: "bg-green-500/20 text-green-400",
-  };
 
   return (
     <main className="min-h-screen bg-black">
@@ -86,42 +80,7 @@ export default async function AdminPage() {
               No hay leads todavía
             </div>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-white/5">
-                  <tr>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Nombre</th>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Email</th>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Teléfono</th>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Servicio</th>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Status</th>
-                    <th className="text-left p-4 text-gray-400 text-sm font-medium">Fecha</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {leads.map((lead) => (
-                    <tr key={lead.id} className="border-t border-white/5 hover:bg-white/5">
-                      <td className="p-4 text-white">{lead.name}</td>
-                      <td className="p-4 text-gray-300">{lead.email}</td>
-                      <td className="p-4 text-gray-300">{lead.phone || "-"}</td>
-                      <td className="p-4 text-gray-300">
-                        {lead.service === "web-basic" && "Plan Básico"}
-                        {lead.service === "web-full" && "Plan Avanzado"}
-                        {lead.service === "custom" && "Personalizado"}
-                      </td>
-                      <td className="p-4">
-                        <span className={`px-2 py-1 rounded-full text-xs ${statusColors[lead.status]}`}>
-                          {lead.status}
-                        </span>
-                      </td>
-                      <td className="p-4 text-gray-400 text-sm">
-                        {new Date(lead.createdAt).toLocaleDateString("es-MX")}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <LeadTable leads={leads} />
           )}
         </div>
       </Section>

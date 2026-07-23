@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z, ZodError } from "zod";
 import { prisma } from "@/lib/prisma";
+import { sendLeadNotification, sendLeadConfirmation } from "@/lib/email";
 
 const leadSchema = z.object({
   name: z.string().min(1, "El nombre es requerido"),
@@ -26,6 +27,11 @@ export async function POST(request: Request) {
         budget: data.budget,
       },
     });
+
+    Promise.allSettled([
+      sendLeadNotification(data),
+      sendLeadConfirmation(data),
+    ]).catch(() => {});
 
     return NextResponse.json({ success: true, lead });
   } catch (error) {

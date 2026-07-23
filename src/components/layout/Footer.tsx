@@ -50,7 +50,13 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Enlazarte.dev. Todos los derechos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Enlazarte.dev. Todos los derechos reservados
+            <span className="text-gray-600"> · </span>
+            <Link href="/login" className="text-gray-600 hover:text-gray-400 transition-colors">
+              Admin
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
