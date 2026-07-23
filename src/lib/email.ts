@@ -13,10 +13,10 @@ const transporter = nodemailer.createTransport({
 interface LeadData {
   name: string;
   email: string;
-  phone: string | undefined;
+  phone?: string;
   service: string;
-  message: string | undefined;
-  budget: string | undefined;
+  message?: string;
+  budget?: string;
 }
 
 const serviceLabels: Record<string, string> = {
